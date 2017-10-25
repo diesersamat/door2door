@@ -1,14 +1,17 @@
-package me.sgayazov.door2door
+package me.sgayazov.door2door.dataprovider
 
 import io.reactivex.Observable
 import io.reactivex.Single
-import me.sgayazov.door2door.dataprovider.CacheDataProvider
-import me.sgayazov.door2door.dataprovider.NetworkDataProvider
 import me.sgayazov.door2door.domain.Data
+import javax.inject.Inject
 
-class Interactor {
-    private val cacheDataProvider: CacheDataProvider = CacheDataProvider()
-    private val networkDataProvider: NetworkDataProvider = NetworkDataProvider()
+class Interactor @Inject constructor() {
+
+    @Inject
+    lateinit var cacheDataProvider: CacheDataProvider
+
+    @Inject
+    lateinit var networkDataProvider: NetworkDataProvider
 
     fun getAllData(): Single<Data> {
         return Observable
