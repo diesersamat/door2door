@@ -18,7 +18,7 @@ class AppModule(private val app: Application, private val baseUrl: String) {
 
     @Provides
     @Singleton
-    internal fun provideRetrofit(): Retrofit {
+    fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
                 .addConverterFactory(MoshiConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -28,7 +28,7 @@ class AppModule(private val app: Application, private val baseUrl: String) {
 
     @Provides
     @Singleton
-    internal fun provideRetrofitService(retrofit: Retrofit): RetrofitService {
+    fun provideRetrofitService(retrofit: Retrofit): RetrofitService {
         return retrofit.create(RetrofitService::class.java)
     }
 }
