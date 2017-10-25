@@ -42,7 +42,8 @@ dependencies {
     compile "com.squareup.moshi:moshi:${VERSION_MOSHI}"
     compile "com.squareup.moshi:moshi-kotlin:${VERSION_MOSHI}"
 
-    compile "io.reactivex.rxjava2:rxjava:${VERSION_RXJAVA}"
+    compile "io.reactivex.rxjava2:rxkotlin:${VERSION_RX}"
+    compile "io.reactivex.rxjava2:rxandroid:2.0.1"
     compile "com.squareup.retrofit2:adapter-rxjava2:${VERSION_RETROFIT}"
 
     compile "com.google.dagger:dagger:${VERSION_DAGGER}"

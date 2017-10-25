@@ -7,8 +7,7 @@ class MainPresenter @Inject constructor() : BasePresenter() {
 
     fun loadData() {
         interactor.getAllData().subscribe({ t1: Data?, t2: Throwable? ->
-            var i = 0
-            i += 1
+            t2?.printStackTrace()
         })
     }
 }

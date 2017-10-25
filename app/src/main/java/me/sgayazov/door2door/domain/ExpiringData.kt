@@ -11,6 +11,6 @@ abstract class ExpiringData {
     private val created: Long = 10
 
     fun isUpToDate(): Boolean {
-        return System.currentTimeMillis() <= created + EXPIRATION_TIME
+        return System.currentTimeMillis() > created + EXPIRATION_TIME
     }
 }
