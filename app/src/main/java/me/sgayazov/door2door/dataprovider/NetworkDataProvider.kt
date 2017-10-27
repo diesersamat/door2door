@@ -9,7 +9,6 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 const private val BASE_URL = "https://raw.githubusercontent.com/door2door-io/transit-app-task/"
 
-
 class NetworkDataProvider {
 
     var apiService: RetrofitService = Retrofit.Builder()
