@@ -5,15 +5,12 @@ import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import me.sgayazov.door2door.domain.Data
-import javax.inject.Inject
 
-class Interactor @Inject constructor() {
+class Interactor constructor() {
 
-    @Inject
-    lateinit var cacheDataProvider: CacheDataProvider
+    var cacheDataProvider: CacheDataProvider = CacheDataProvider()
 
-    @Inject
-    lateinit var networkDataProvider: NetworkDataProvider
+    var networkDataProvider: NetworkDataProvider = NetworkDataProvider()
 
     fun getAllData(): Single<Data> {
         return Observable
