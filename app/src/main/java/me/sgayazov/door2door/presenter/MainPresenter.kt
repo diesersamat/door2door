@@ -6,7 +6,7 @@ import me.sgayazov.door2door.domain.Data
 class MainPresenter constructor(val mainView: MainView) : BasePresenter() {
 
     fun loadData() {
-        interactor.getAllData().subscribe({ t1: Data?, t2: Throwable? ->
+        interactor.getAllData().subscribe({ _: Data?, t2: Throwable? ->
             t2?.printStackTrace()
         })
     }
